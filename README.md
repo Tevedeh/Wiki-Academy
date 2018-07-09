@@ -21,4 +21,5 @@ WIP
 
 ## Contact
 
-WIP
+tevedeh@gmail.com
+linkedin.com/in/tristan-anderson
