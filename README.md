@@ -1,4 +1,9 @@
 # Welcome to WikiTeacher!
+
+## Work In Progress!!!
+
+**This project is a port from a previously untracked project I wrote in Java. This is not even close to done yet, so don't even bother.**
+
 ## About
 
 **WikiTeacher** is a tool to help you quickly learn interesting subjects. While most people can quickly learn by simply pulling up a Wikipedia page about a specific thing and reading a few paragraphs, WikiTeacher attempts to give you a deeper understanding of the subject by compiling different Wikipedia entries that it deems relevant to your selected subject. 
