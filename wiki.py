@@ -4,6 +4,15 @@ import requests
 from bs4 import BeautifulSoup
 import urllib3
 
+class PageData():
+
+    baseurl = 'https://en.wikipedia.org'
+
+    def __init__(self, data):
+        self.soup = data
+
+    def getLinks:
+
 class WikiScrape():
     baseurl = 'https://en.wikipedia.org'
 
@@ -31,7 +40,7 @@ class WikiScrape():
             self.accessInARow = 0
         http = urllib3.PoolManager()
         page = http.request('GET', self.baseurl + link)
-        return BeautifulSoup(page.data, 'html.parser')
+        return PageData(data = BeautifulSoup(page.data, 'html.parser')
     
 
         

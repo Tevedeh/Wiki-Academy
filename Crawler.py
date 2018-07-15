@@ -2,6 +2,7 @@ import datetime
 import time
 import requests
 from bs4 import BeautifulSoup
+from ..wiki import WikiScrape, PageData
 
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
