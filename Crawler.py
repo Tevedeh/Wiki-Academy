@@ -7,7 +7,7 @@ import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
-class Crawler():
+class Crawler:
 
     baseurl = 'https://en.wikipedia.org'
 
