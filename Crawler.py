@@ -30,7 +30,7 @@ class Crawler:
             self.addLinks()
         self.printEdges()
 
-    def getPage(self, link):
+    def getSoup(self, link):
         self.startTime = time.time()
         self.accessInARow += 1
         if self.accessInARow >= 25:
@@ -39,7 +39,14 @@ class Crawler:
         http = urllib3.PoolManager()
         page = http.request('GET', self.baseurl + link)
         soup = BeautifulSoup(page.data, 'html.parser')
-        soupstr = str(soup).encode('utf-8')
+        return soup
+        
+
+    def soupString(self, soup):
+        string = str(soup).encode('utf-8')
+        return string
+
+    def soupLinks(self, soup):
         links = soup.find_all('a')
         for link in links:
             mystr = link.get('href')
@@ -47,11 +54,6 @@ class Crawler:
                 print("None")
             elif 'wiki' in mystr:
                 print(link.get('href'))
-        return soupstr
-        
-
-        
-
 
     def checkTopics(self, page):
         for topic in self.topics:
@@ -64,7 +66,9 @@ class Crawler:
         pass
 
     def addLinks(self):
-        pass
+        current = self.queue[0]
+        
+
 
     def findEdge(self):
         pass
@@ -78,6 +82,4 @@ class Crawler:
             print(x)
 
 
-crawler = Crawler(seed=0, maximum=0, topics=0, filename=0)
 
-crawler.getPage(link='/wiki/Iowa_State_University')
