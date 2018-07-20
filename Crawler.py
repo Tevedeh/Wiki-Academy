@@ -65,8 +65,11 @@ class Crawler:
     def printEdges(self):
         pass
 
-    def addLinks(self):
-        current = self.queue[0]
+    def addLinks(self, soup):
+        links = soup.find_all('a')
+        for link in links:
+            if self.checkTopics(self.soupString(soup)) and 'wiki' in link:
+                self.queue.append(link)
         
 
 
